@@ -626,8 +626,12 @@ body.light-theme {
   color: var(--first-color-alt);
 }
 
-#readMore:hover {
+#readMore:hover .read-more-icon {
   transform: translateX(0.25rem);
+}
+
+.read-more-icon {
+  transition: 0.4s;
 }
 
 .contact__card-icon {
