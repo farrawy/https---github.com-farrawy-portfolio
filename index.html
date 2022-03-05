@@ -575,10 +575,11 @@
           <div class="contact__content">
             <h3 class="contact__title">Send me your project</h3>
 
-            <form action="" class="contact__form">
+            <form action="POST" data-netlify="true" class="contact__form">
               <div class="contact__form-div">
-                <label for="" class="contact__form-tag">Name</label>
+                <label for="name" class="contact__form-tag">Name</label>
                 <input
+                  name="name"
                   type="text"
                   placeholder="Your Name"
                   class="contact__form-input"
@@ -586,8 +587,9 @@
               </div>
 
               <div class="contact__form-div">
-                <label for="" class="contact__form-tag">Email</label>
+                <label for="email" class="contact__form-tag">Email</label>
                 <input
+                  name="email"
                   type="email"
                   placeholder="Your email"
                   class="contact__form-input"
@@ -595,10 +597,10 @@
               </div>
 
               <div class="contact__form-div contact__form-area">
-                <label for="" class="contact__form-tag">Project</label>
+                <label for="project" class="contact__form-tag">Project</label>
                 <textarea
-                  name=""
-                  id=""
+                  name="project"
+                  id="project"
                   cols="30"
                   rows="10"
                   placeholder="Write your project"
