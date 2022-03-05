@@ -99,3 +99,21 @@ const sr = ScrollReveal({
 sr.reveal(`.home__data`)
 sr.reveal(`.home__handle`, {delay: 700})
 sr.reveal(`.home__social, .home__scroll`, {delay: 900, orgin: 'bottom'})
+
+/*================= Read More ==================*/
+
+function readMore() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var readMore = document.getElementById("readMore");
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        readMore.innerHTML = "Read More -->";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        readMore.innerHTML = "Read Less";
+        moreText.style.display = "inline";
+    }
+}
