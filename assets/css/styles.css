@@ -617,6 +617,10 @@ body.light-theme {
   text-align: center;
 }
 
+#more {
+  display: none;
+}
+
 .contact__card-icon {
   font-size: 2rem;
   color: var(--title-color);
