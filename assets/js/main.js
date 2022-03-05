@@ -109,7 +109,7 @@ function readMore() {
 
     if (dots.style.display === "none") {
         dots.style.display = "inline";
-        readMore.innerHTML = "Read More -->";
+        readMore.innerHTML = "Read More <i class='bx bx-right-arrow-alt' ></i>";
         moreText.style.display = "none";
     } else {
         dots.style.display = "none";

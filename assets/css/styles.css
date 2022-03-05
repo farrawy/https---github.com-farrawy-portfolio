@@ -621,6 +621,15 @@ body.light-theme {
   display: none;
 }
 
+#readMore {
+  cursor: pointer;
+  color: var(--first-color-alt);
+}
+
+#readMore:hover {
+  color: black;
+}
+
 .contact__card-icon {
   font-size: 2rem;
   color: var(--title-color);
