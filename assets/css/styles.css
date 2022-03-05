@@ -627,7 +627,7 @@ body.light-theme {
 }
 
 #readMore:hover {
-  color: black;
+  transform: translateX(0.25rem);
 }
 
 .contact__card-icon {
