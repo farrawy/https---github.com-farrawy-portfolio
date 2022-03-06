@@ -323,6 +323,7 @@ body.light-theme {
 }
 
 .home__img {
+  height: 260px;
   width: 160px;
 }
 
@@ -896,6 +897,7 @@ body.light-theme {
   }
 
   .home__img {
+    height: 340px;
     width: 220px;
   }
 
