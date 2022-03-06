@@ -1,0 +1,23 @@
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#btn {
+    border-radius: 17px;
+    position: fixed;
+    margin-top: 15%;
+    padding: .8rem;
+    background-color: transparent;
+    color: black;
+}
+
+.container {
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
