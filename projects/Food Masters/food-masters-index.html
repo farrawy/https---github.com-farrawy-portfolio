@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="Ahmed Elfarra - Portfolio Website" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="assets/img/Ahmed Elfarra r.png" />
+    <meta
+      property="og:url"
+      content="http://euro-travel-example.com/index.htm"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:description" content="Junior Software Developer" />
+    <meta property="og:site_name" content="Ahmed Elfarra" />
+    <meta name="twitter:image:alt" content="Alt text for image" />
+
+    <!-- code -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/chef_selected.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!--=============== SPLIDE CSS ===============-->
+    <link rel="stylesheet" href="assets/css/splide.min.css" />
+
+    <title>Food Masters - Food Recipe App</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="../../index.html" >
+          <i class="bx bx-left-arrow-alt nav__logo back-to-main"></i>
+        </a>
+        <a href="#" class="nav__logo">Food Masters</a>
+
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home-alt"></i>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#intro" class="nav__link">
+                <i class="bx bx-flag"></i>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#tools" class="nav__link">
+                <i class="bx bx-code-alt"></i>
+              </a>
+            </li>
+
+            <!-- <li class="nav__item">
+              <a href="#photos" class="nav__link" disabled>
+                <i class="bx bx-briefcase-alt-2"></i>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#team" class="nav__link">
+                <i class="bx bx-message-square-detail"></i>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+
+        <!-- Theme change button -->
+        <i class="bx bx-moon change-theme" id="theme-button"></i>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== HOME ===============-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__data">
+            <span class="home__greeting">A Food Recipe App</span>
+            <h1 class="home__name">Food Masters</h1>
+            <h3 class="home__education">Android Application</h3>
+
+            <div class="home__buttons">
+              <a
+                href="Food-Masters.apk"
+                download=""
+                class="button button--ghost"
+              >
+                Download App
+              </a>
+              <a href="#intro" class="button"> Intro </a>
+            </div>
+          </div>
+<!-- 
+          <div class="home__handle">
+            <img src="assets/img/splash_screen.png" alt="" class="home__img" />
+          </div> -->
+
+          <div class="home__handle">
+
+            <div class="slider">
+              <div class="slider__slides">
+                
+                <div class="slider__slide active">
+                  <img src="./assets/img/splash_screen.png" class="home__img" alt="">
+                </div>
+                <div class="slider__slide">
+                  <img src="./assets/img/recipes-1-dark.png" class="home__img" alt="">
+                </div>
+                <div class="slider__slide">
+                  <img src="./assets/img/recipes-1-light.png" class="home__img" alt="">
+                </div>
+                <div class="slider__slide">
+                  <img src="./assets/img/overview-1-dark.png" class="home__img" alt="">
+                </div>
+                <div class="slider__slide">
+                  <img src="./assets/img/overview-1-light.png" class="home__img" alt="">
+                </div>
+                <div class="slider__slide">
+                  <img src="./assets/img/ingredients-1-dark.png" class="home__img" alt="">
+                </div>
+                <div class="slider__slide">
+                  <img src="./assets/img/ingredients-1-light.png" class="home__img" alt="">
+                </div>
+              </div>
+              
+              <div id="nav-button--prev" class="slider__nav-button"></div>
+              <div id="nav-button--next" class="slider__nav-button"></div>
+              
+              <div class="slider__nav">
+                <div class="slider__navlink active"></div>
+                <div class="slider__navlink"></div>
+                <div class="slider__navlink"></div>
+                <div class="slider__navlink"></div>
+                <div class="slider__navlink"></div>
+                <div class="slider__navlink"></div>
+                <div class="slider__navlink"></div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="home__social">
+            <a
+              href="https://www.linkedin.com/in/ahmadalfarra/"
+              class="home__social-link"
+              target="_blank"
+            >
+              <i class="bx bxl-linkedin-square"></i>
+            </a>
+            <a
+              href="https://github.com/farrawy/"
+              class="home__social-link"
+              target="_blank"
+            >
+              <i class="bx bxl-github"></i>
+            </a>
+            <a
+              href="https://twitter.com/istashajr"
+              class="home__social-link"
+              target="_blank"
+            >
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </div>
+
+          <a href="#intro" class="home__scroll">
+            <i class="bx bx-mouse home__scroll-icon"></i>
+            <span class="home__scroll-name">Scroll Down</span>
+          </a>
+        </div>
+      </section>
+
+      <!--=============== ABOUT ===============-->
+      <section class="about section" id="intro">
+        <span class="section__subtitle"> Intro </span>
+        <h2 class="section__title">Our Mission and Vision</h2>
+
+        <div class="about__container container grid">
+          <p class="about__description">
+            <span class="m_v">Mission</span> <br />
+            <br />
+            Our mission is to provide various Food Recipes for people who don't
+            know what to eat or want to experience some new traditional recipes
+            from all around the world.
+          </p>
+
+          <div class="about__data">
+            <p class="about__description">
+              <span class="m_v">Vision</span> <br />
+              <br />
+              Our vision is to help people stop spending their money on fast
+              food when they can cook healthy food at home and help people track
+              their diet in the future.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== Built with ===============-->
+      <section class="skills section" id="tools">
+        <span class="section__subtitle">Technologies</span>
+        <h2 class="section__title">Tools used</h2>
+
+        <div class="skills__container container grid">
+          <div class="skills__content">
+            <h3 class="skills__title">Frontend</h3>
+
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">XML</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Navigation Component</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">RecyclerView</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Dark and Light Themes</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- group 2 -->
+
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Motion Layout</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">ViewModel</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Shimmer Effect</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">View Pager</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- backend -->
+
+          <div class="skills__content">
+            <h3 class="skills__title">Backend</h3>
+
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Kotlin</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">LiveData</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Dependencies Injection</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- group 2 -->
+
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Modal Bottom Sheet</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Data Binding</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">DiffUtil</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- android  -->
+
+          <div class="skills__content">
+            <h3 class="skills__title">Database</h3>
+
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Firebase</h3>
+                    <span class="skills__level">Authentication</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">ROOM SQLite Database</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Database Inspector</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- group 2 -->
+
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Offline Cache</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">DataStore Preferences</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- digital marketing -->
+
+          <div class="skills__content">
+            <h3 class="skills__title">Design & Version Control</h3>
+
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Figma</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Photoshop</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- break -->
+
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Git</h3>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="bx bxs-badge-check"></i>
+
+                  <div>
+                    <h3 class="skills__name">Github</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /><br /><br />
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <h1 class="footer__title">Food Master</h1>
+
+        <ul class="footer__list">
+          <li><a href="#intro" class="footer__link">Intro</a></li>
+          <li><a href="#tools" class="footer__link">Tools</a></li>
+          <li><a href="#members" class="footer__link">Members</a></li>
+        </ul>
+
+        <ul class="footer__social">
+          <a
+            href="https://facebook.com/"
+            target="_blank"
+            class="footer__social-link"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            class="footer__social-link"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            class="footer__social-link"
+            ><i class="bx bxl-twitter"></i
+          ></a>
+        </ul>
+
+        <span class="footer__copy">
+          &#169; Ahmed Elfarra. All rights reserved
+        </span>
+      </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src=""></script>
+
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== Splide JS ===============-->
+    <script src="assets/js/splide.min.js"></script>
+
+    <!-- ============== Linkein Badge ========= -->
+    <script
+      src="https://platform.linkedin.com/badges/js/profile.js"
+      async
+      defer
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
