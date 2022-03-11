@@ -1,0 +1,303 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Checkout</title>
+
+
+    <style>
+        
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.payment {
+    position: relative;
+}
+
+div form {
+  /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 3%);
+    border: 1px solid black;
+    padding: 25px;
+}
+
+input {
+    width: 240px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: .4rem;
+    border: 1px solid #eee;
+    border-radius: .4rem;
+    background-color: rgba(10, 10, 10, 0.1);
+    margin: .6rem;
+}
+
+
+
+input:invalid + span:after {
+  position: absolute; content: '✖';
+  padding-top: 25px;
+  color: #8b0000;
+}
+
+input:valid + span:after {
+  position: absolute;
+  content: '✓';
+  padding-top: 25px;
+  color: #009000;
+}
+
+.small{
+    width: 50px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+    border-radius: .4rem;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+}
+
+#countryCode {
+    width: 40px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+    border-radius: .4rem;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+}
+
+.card {
+    width: 140px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+}
+
+.phone {
+    padding: .4rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: .4rem;
+    /* margin: 1rem; */
+    width: 330px;
+}
+
+.card-box {
+    padding: .4rem;
+    border: none;
+    background-color: rgba(10, 10, 10, 0.1);
+    border-radius: .4rem;
+    margin: 1rem;
+    width: 340px;
+}
+
+*:focus {
+    outline: none;
+}
+
+#back {
+    border-left: 2px solid black;
+    padding-left: 1rem;
+}
+
+select {
+    width: 140px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: .4rem;
+    margin: 1rem;
+    border: 1px solid #eee;
+    border-radius: .4rem;
+    background-color: rgba(10, 10, 10, 0.1);
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label {
+    margin: 1rem;
+}
+
+h3 {
+    margin: 1rem;
+}
+
+.pay {
+    border: 1px solid black;
+    background-color: black;
+    color: #eee;
+    border-radius: 10px;
+    padding: .4rem;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.pay:hover {
+    cursor: pointer;
+    
+}
+
+</style>
+
+</head>
+<body>
+    <div class="payment">
+        <form action="loadingPage.html">
+            <div class="box">
+                <h3>Checkout Information</h3>
+                <select required name="city" id="city">
+                    <option value="1">Select City</option>
+                    <option value="2">Istanbul</option>
+                    <option value="3">Trabzon</option>
+                    <option value="4">Malatya</option>
+                    <option value="5">Bursa</option>
+                    <option value="6">Ankara</option>
+                    <option value="7">Izmir</option>
+                    <option value="8">Adana</option>
+                </select>
+            </div>
+            <br>
+            <div class="box">
+                <label for="firstName">Your First Name</label><br>
+                <input type="text" name="firstName" required class="input" placeholder="Your First Name"><span class="validity"></span>
+            </div>
+            <br>
+            <div class="box">
+                <label for="lastName">Your Last Name</label><br>
+                <input type="text" name="lastName"  required class="input" placeholder="Your Last Name"><span class="validity"></span>
+            </div>
+            <br>
+            <div class="box">
+                <label for="email">Your Email Address</label><br>
+                <input type="email" name="email" id="email" required class="input" placeholder="Your Email Address"><span class="validity"></span>
+            </div>
+            <br>
+            <div class="box">
+                <label for="phoneNumber">Your Number</label><br>
+                <div class="phone">
+                    +90<input type="text" name="phoneNumber" required class="input" placeholder="5555555555" maxlength="10"><span class="validity"></span>
+                    
+                </div>
+            </div>
+            <br>
+            <div class="box">
+                <label for="address">Your Address</label><br>
+                <input type="text" name="address" id="address" required class="input" placeholder="İlçe, Mahalle, Sokak, Bina No..."><span class="validity"></span>
+            </div>
+            <br>
+            <div class="box">
+                <h3>Payment Information</h3>
+                <label for="cardName">Name on Card</label><br>
+                <input type="text" name="cardName" id="cardNumber" placeholder="Ex: Ahmed Elfarra"><br>
+                <label for="cardNumber">Credit Card Number</label>
+                <div class="card-box">
+                    <i class="far fa-credit-card"></i> <input type="text" name="cardNumber" class="input card" minlength="16" maxlength="16" placeholder="Card Number">
+                     <input type="text" name="month" required class="input small" placeholder="MM" minlength="2" maxlength="2" min="1" max="12">/
+                     <input type="text" name="year" required class="input small" placeholder="YY" minlength="2" maxlength="2" min="21" max="99">
+                     <input type="text" name="cvc" required class="input small" placeholder="CVC" minlength="3" maxlength="3">
+                    </div>
+            </div>
+            <br>
+            <div class="box">
+                <button  class="pay" id="pay"></button>
+                <a href="cart.html" id="back"> Back to Cart</a>
+            </div>
+
+
+
+        </form>
+    </div>
+</body>
+
+<script>
+
+
+
+    var total = localStorage.getItem("Total");
+    console.log(total);
+
+
+    var currency = "Pay $";
+    var pay = document.getElementById("pay").innerHTML = currency + parseFloat(total).toFixed(2);
+    console.log(pay);
+
+</script>
+</html>

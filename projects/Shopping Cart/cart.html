@@ -1,0 +1,161 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="sstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrap cf">
+        <h1 class="projTitle">Shopping Cart</h1>
+        <div class="heading cf">
+            <h1>My Cart</h1>
+            <a href="index.html" class="continue">Continue Shopping</a>
+        </div>
+        <div class="cart">
+            <table class="tableHead" id="tableHead">
+                <thead>
+                    <td>Photo</td>
+                    <td class="prodHeader">Product</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                    <td>Total</td>
+                    <td>Remove</td>
+                </thead>
+
+            </table>
+        </div>
+
+
+        <div class="subtotal cf">
+            <ul>
+                <li class="totalRow"><a href="#" class="label" onclick="clearAll()">Clear Cart</a></li>
+                <li class="totalRow"><span class="label">Subtotal</span><span class="value" id="totalRow"></span></li>
+
+                <li class="totalRow" id="shipping"><span class="label">Shipping</span><span class="value">$5.00</span></li>
+
+                <li class="totalRow"><span class="label">Tax</span><span class="value" id="tax"></span></li>
+                <li class="totalRow final"><span class="label">Total</span><span class="value" id="finalTotal"></span></li>
+                <li class="totalRow"><a href="checkout.html" class="btn continue">Checkout</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <script>
+        var cart = JSON.parse(localStorage.getItem("cart") || "[]");
+        console.log("n" + cart);
+        if (cart.length > 0) {
+            cart.forEach(element => {
+                console.log('ahmed');
+                var item = `<tr class="cartWrap">`;
+                item += `<td>  <img width="50px" src=${element.image} id="image">  </td>`
+                item += "<td>" + element.title + "</td>";
+                item += `<td><div class="quantity">
+                    <input type="number" class="qty" data-id="${element.id}" min="0" max="9" step="1" value="${element.quantity}">
+                    </div> </td>`;
+                item += `<td> $ ${element.price}  </td>`;
+                item += `<td id="price-${element.id}" class="txtCal"> ${element.price * element.quantity} </td>`;
+                item += `<td> <a href="#" class="remove" item-id="${element.id}">x</a> </td>`
+                item += "</tr>";
+
+                $("#tableHead").append(item);
+            });
+        } else {
+            console.log("not ahmed");
+            var item = `<tr class="empty">`;
+            item += "<td>  </td>";
+            item += "<td>  </td>";
+            item += "<td>  </td>";
+            item += `<td>Your Cart is Empty. Continue shopping <a href="index.html">here</a>.</td>`;
+            item += "<td>  </td>";
+            $("#tableHead").append(item);
+        }
+
+
+
+        console.log(cart)
+
+        function clearAll() {
+            localStorage.clear();
+            cartUpdate();
+
+        }
+
+        cartUpdate();
+
+        function cartUpdate() {
+            var subtotal = 0;
+            var tax = 1;
+            var finalTotal = 0;
+            let sign = "$";
+
+            $('.qty').each(i => {
+                var newQty = $('.qty')[i].value
+                var productId = $('.qty')[i].getAttribute('data-id');
+                console.log(newQty);
+
+                var total = 0;
+                total += newQty * cart[i].price;
+
+                subtotal = subtotal + total
+                console.log(newQty, total, cart[i].price)
+
+                $(".remove").on('click', function(e) {
+                    console.log(e.target.getAttribute('item-id'))
+                    $(this).closest('tr').remove();
+
+                    cart.forEach((i, k) => {
+                        console.log(i, productId);
+                        if (i.id == e.target.getAttribute('item-id')) {
+                            cart.splice(k, 1);
+                            cartUpdate();
+                        }
+                    });
+                    console.log(cart);
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                });
+
+                finalTotal = subtotal + tax + 5
+
+                document.getElementById("price-" + cart[i].id).innerHTML = sign + total.toFixed(2);
+
+                tax = (subtotal + 5) * 0.18;
+
+                cart.forEach((i, k) => {
+                    console.log(i, productId);
+                    if (i.id == productId) {
+                        cart[k].quantity = newQty;
+                    }
+                });
+                console.log(cart);
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+            });
+
+            // localStorage.setItem("cart", JSON.stringify(cart));
+
+            localStorage.setItem("Total", finalTotal);
+
+
+
+            document.getElementById('totalRow').innerHTML = sign + subtotal.toFixed(2);
+            document.getElementById('tax').innerHTML = sign + tax.toFixed(2);
+            document.getElementById('finalTotal').innerHTML = sign + finalTotal.toFixed(2);
+
+
+        }
+
+        // cartUpdate();
+        $(".qty").on('change', function(e) {
+            cartUpdate();
+
+        })
+    </script>
+</body>
+
+</html>

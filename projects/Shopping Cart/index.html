@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şok</title>
+    <link rel="icon" href="/Images/shopping-cart.jpg" type="image/x-icon">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> -->
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <div class="header-1">
+
+            <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Şok</a>
+
+            <form action="" class="search-box-container">
+                <input type="search" id="search-box" placeholder="search here...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+        </div>
+
+
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li class="dropdown"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+
+        </ul>
+
+
+
+    </header>
+    <script>
+        /* When the user clicks on the button,
+                toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+
+    </style>
+
+    </header>
+
+    <!-- header section ends -->
+
+
+
+
+
+    <!-- product section starts  -->
+    <div id="heading">
+
+    </div>
+    <section class="product" id="product">
+
+
+
+    </section>
+
+    <!-- product section ends -->
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+
+            <div class="box">
+                <h3>quick links</h3>
+                <div class="links">
+                    <a href="#">home</a>
+                    <a href="#">category</a>
+                    <a href="#">product</a>
+                    <a href="#">deal</a>
+                    <a href="#">contact</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer section ends -->
+
+
+
+
+
+
+
+    <script>
+        var cart = [];
+
+        var items = [{
+            "id": 1,
+            "title": "Bananas",
+            "price": 8.99,
+            "unit": "kg",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/product-1.png",
+            "stock": 83
+        }, {
+            "id": 2,
+            "title": "Tomatoes",
+            "price": 4.99,
+            "unit": "kg",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/product-2.png",
+            "stock": 54
+        }, {
+            "id": 3,
+            "title": "Orange",
+            "price": 5.99,
+            "unit": "kg",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/product-3.png",
+            "stock": 63
+        }, {
+            "id": 4,
+            "title": "Milk",
+            "price": 6.50,
+            "unit": "lt",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/product-4.png",
+            "stock": 25
+        }, {
+            "id": 5,
+            "title": "Apples",
+            "price": 5.60,
+            "unit": "kg",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/product-7.png",
+            "stock": 65
+        }, {
+            "id": 6,
+            "title": "Almonds",
+            "price": 12.50,
+            "unit": "kg",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/product-6.png",
+            "stock": 25
+        }, {
+            "id": 7,
+            "title": "Plum",
+            "price": 2.35,
+            "unit": "kg",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/product-5.png",
+            "stock": 60
+        }, {
+            "id": 8,
+            "title": "Butter",
+            "price": 5.60,
+            "min": 100,
+            "incr": 100,
+            "unit": "g",
+            "image": "./Images/product-8.png",
+            "stock": 5000
+        }, {
+            "id": 9,
+            "title": "Lettuce",
+            "price": 1.20,
+            "unit": "pc",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/Lettuce.jpg",
+            "stock": 50
+        }, {
+            "id": 10,
+            "title": "Onions",
+            "price": 4.20,
+            "unit": "kg",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/Onions.jpg",
+            "stock": 50
+        }, {
+            "id": 11,
+            "title": "Chips",
+            "price": 1.20,
+            "unit": "pc",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/chips.jpg",
+            "stock": 50
+        }, {
+            "id": 12,
+            "title": "Coca Cola",
+            "price": 3.80,
+            "unit": "pc",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/cocacola.jpg",
+            "stock": 300
+        }, {
+            "id": 13,
+            "title": "Cucumber",
+            "price": 2.20,
+            "unit": "kg",
+            "min": 1,
+            "incr": 1,
+            "image": "./Images/Cucumber.jpg",
+            "stock": 124
+        }]
+
+
+        var stockNew = []
+        buildItems(items)
+            // addToCart(items)
+        function addToCart(data) {
+            // alert(data);
+            var stock = items.stock;
+            items.forEach((i, k) => {
+
+                if (i.id == data) {
+                    console.log("ID: " + i.id + " Title: " + i.title + " Price: " +
+                        i.price + " In stock: " + i.stock);
+
+                    var x = document.getElementById("qty-" + i.id).value;
+                    console.log(x);
+
+                    inCart = false;
+                    cart.forEach((items, key) => {
+                        if (i.id == items.id) {
+                            inCart = true;
+                            cart[key].quantity += parseInt(x)
+
+                        }
+                    })
+
+                    if (!inCart) {
+
+                        cart.push({
+                            id: i.id,
+                            image: i.image,
+                            title: i.title,
+                            k: "$",
+                            price: parseFloat(i.price),
+                            quantity: parseInt(x)
+                        });
+                        items[k].stock -= parseInt(x)
+                        console.log("newStock " + items[k].stock);
+                        stockNew.push(items[k].stock);
+                    }
+
+                    console.log(stockNew);
+                    console.log(items);
+
+                    // alert(x + i.unit + " of " + i.title + " added to cart")
+
+                }
+
+            })
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+
+
+        document.getElementById("heading").innerHTML = `<h1 class="heading"><span>${items.length}</span> results</h1>`
+
+        function buildItems(data) {
+            var products = document.getElementById('product')
+            items.forEach(Element => {
+                var rand = (Math.floor(Math.random() * 50) + 20);
+                var product = `<div class="box">`;
+                product += `<span class="discount" id="discount">${rand}%</span>`;
+                product += `<img src="${Element.image}" id="image" alt="">`;
+                product += `<h3 class="product-title" id="product-title">${Element.title}</h3>`;
+                product += `<div class="price" class="price"> $ ${Element.price} <span>${parseFloat((Element.price*(rand/100))+Element.price).toFixed(2)}</span> </div>`;
+                product += `<div class="quantity">
+                <span>quantity : </span>
+                <input class="qty" type="number" id="qty-${Element.id}" min=${Element.min} max="${Element.stock}" value="${Element.min}" step=${Element.incr}>
+                <span> /${Element.unit} </span>
+            </div>`;
+                product += `<div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>`;
+                product += `<div><span id="stock-${Element.stock}"> ${Element.stock} </span></div>`;
+                product += `<a class="addToCart btn"  onclick="addToCart(${Element.id})" item-in-cart=0 item-id=${Element.id} >add to cart</a>`;
+                product += `</div>`;
+                products.innerHTML += product
+            })
+
+
+
+
+
+        }
+    </script>
+
+    <!-- custom js file link  -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>

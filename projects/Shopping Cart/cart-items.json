@@ -1,0 +1,31 @@
+{"items" : [{
+    "id": 1,
+    "title": "Tomatoes",
+    "price": 8.99,
+    "image": "./Images/Tomato.jpg"
+},
+{
+    "id": 2,
+    "title": "Cucumber",
+    "price": 4.99,
+    "image": "./Images/Cucumber.jpg"
+},
+{
+    "id": 3,
+    "title": "Onions",
+    "price": 5.99,
+    "image": "./Images/Onions.jpg"
+},
+{
+    "id": 4,
+    "title": "Chips",
+    "price": 6.50,
+    "image": "./Images/chips.jpg"
+},
+{
+    "id": 5,
+    "title": "Coca-Cola 1L",
+    "price": 5.60,
+    "image": "./Images/cocacola.jpg" 
+}
+]}
