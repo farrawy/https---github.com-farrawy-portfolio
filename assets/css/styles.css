@@ -12,11 +12,12 @@
         Blue: hsl(207, 90%, 72%)
         Pink: hsl(356, 66%, 75%)
         Teal: hsl(174, 63%, 62%)
+        Dark Pink: hsl(348, 85%, 54%)
   */
   --first-hue: 350;
-  --sat: 66%;
-  --lig: 75%;
-  --second-hue: 219;
+  --sat: 80%;
+  --lig: 70%;
+  --second-hue: 250;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
@@ -334,7 +335,7 @@ body.light-theme {
   background: linear-gradient(
     180deg,
     hsla(var(--first-hue), var(--sat), var(--lig), 1),
-    hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
+    hsla(var(--second-hue), var(--sat), var(--lig), 0.6)
   );
   border-radius: 10rem 10rem 1rem 1rem;
   display: flex;
