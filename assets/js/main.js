@@ -19,9 +19,10 @@ const data = [
   {
     id: "1",
     image: "../assets/img/krypt-web3.0.png",
-    name: "Krypt - Web3.0 Smart Contract Blockchain",
+    name: "Krypt - Web3.0 Smart Contract",
     class: "web3",
     link: "https://web3-krypt-blockchain.netlify.app/",
+    source: "https://google.com",
     a: "View Project",
   },
   {
@@ -30,6 +31,7 @@ const data = [
     name: "Animated To Do List Website",
     class: "web",
     link: "./projects/todolist/todo_index.html",
+    source: "https://google.com",
     a: "View Project",
   },
   {
@@ -38,6 +40,7 @@ const data = [
     name: "Shopping Website",
     class: "web",
     link: "../projects/Shopping Cart/index.html",
+    source: "https://google.com",
     a: "View Project",
   },
   {
@@ -46,6 +49,7 @@ const data = [
     name: "Speed Typing Game",
     class: "web",
     link: "../projects/speedtyping/index.html",
+    source: "https://google.com",
     a: "View Project",
   },
   {
@@ -54,6 +58,7 @@ const data = [
     name: "Food Recipes App - Android",
     class: "mobile",
     link: "../projects/Food Masters/food-masters-index.html",
+    source: "https://google.com",
     a: "View Project",
   },
   {
@@ -61,7 +66,23 @@ const data = [
     image: "../assets/img/react-todo.png",
     name: "To Do React Native App",
     class: "mobile",
-    link: "https://github.com/farrawy/React-Native-To-Do-List.git",
+    source: "https://github.com/farrawy/React-Native-To-Do-List.git",
+    a: "View Project Source",
+  },
+  {
+    id: "7",
+    image: "../assets/img/nft-marketplace.png",
+    name: "React Native NFT Marketplace",
+    class: "mobile web3",
+    source: "https://github.com/farrawy/Tesla-Clone-App",
+    a: "View Project Source",
+  },
+  {
+    id: "8",
+    image: "../assets/img/tesla-clone.png",
+    name: "React Native Tesla Clone App",
+    class: "mobile",
+    source: "https://github.com/farrawy/RN-NFT-Marketplace",
     a: "View Project Source",
   },
 ];
@@ -70,9 +91,17 @@ function projectFunction(item, index) {
   var project = `<div class="work__card mix ${item.class}">`;
   project += `<img src="${item.image}" class="work__img"/>`;
   project += `<h3 class="work__title">${item.name}</h3>`;
-  project += `<a href="${item.link}" class="work__button">
-                ${item.a} <i class="bx bx-right-arrow-alt work__icon"></i></a>`;
-  project += `<a href="#"><i class='bx bxl-github work__icon work__source'></i></a>`;
+  {
+    item.link
+      ? (project += `<a href="${item.link}" class="work__button">
+                ${item.a} <i class="bx bx-right-arrow-alt work__icon"></i></a>`)
+      : (project += `<a href="${item.source}"><i class='bx bxl-github work__icon work__source'></i></a>`);
+  }
+  {
+    item.link
+      ? (project += `<a href="${item.source}"><i class='bx bxl-github work__icon work__source'></i></a>`)
+      : null;
+  }
   project += `</div>`;
   projects.innerHTML += project;
 }
