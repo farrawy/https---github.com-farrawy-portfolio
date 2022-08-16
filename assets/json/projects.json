@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "image": "../assets/img/krypt-web3.0.png",
+    "name": "Krypt - Web3.0 Smart Contract Blockchain",
+    "class": "web3",
+    "link": "https://google.com"
+  },
+  {
+    "id": "2",
+    "image": "../assets/img/todolist-cover.png",
+    "name": "Animated To Do List Website",
+    "class": "web",
+    "link": "https://google.com"
+  },
+  {
+    "id": "3",
+    "image": "../assets/img/shopping-website.png",
+    "name": "Shopping Website",
+    "class": "web",
+    "link": "https://google.com"
+  },
+  {
+    "id": "4",
+    "image": "../assets/img/speedtyping.png",
+    "name": "Speed Typing Game",
+    "class": "web",
+    "link": "https://google.com"
+  },
+  {
+    "id": "5",
+    "image": "../assets/img/food-masters.png",
+    "name": "Food Recipes App - Android",
+    "class": "mobile",
+    "link": "https://google.com"
+  },
+  {
+    "id": "6",
+    "image": "../assets/img/react-todo.png",
+    "name": "To Do React Native App",
+    "class": "mobile",
+    "link": "https://google.com"
+  }
+]
