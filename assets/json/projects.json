@@ -1,4 +1,4 @@
-[
+{"projects": [
   {
     "id": "1",
     "image": "../assets/img/krypt-web3.0.png",
@@ -40,5 +40,30 @@
     "name": "To Do React Native App",
     "class": "mobile",
     "link": "https://google.com"
+  },
+  {
+    "id": "7",
+    "image": "../assets/img/nft-marketplace.png",
+    "name": "React Native NFT Marketplace",
+    "class": "mobile web3",
+    "source": "https://github.com/farrawy/Tesla-Clone-App",
+    "a": "View Project Source"
+  },
+  {
+    "id": "8",
+    "image": "../assets/img/tesla-clone.png",
+    "name": "React Native Tesla Clone App",
+    "class": "mobile",
+    "source": "https://github.com/farrawy/RN-NFT-Marketplace",
+    "a": "View Project Source"
+  },
+  {
+    "id": "9",
+    "image": "../assets/img/foodecity.png",
+    "name": "React Native Foodecity",
+    "class": "mobile",
+    "source": "https://github.com/farrawy/RN-NFT-Marketplace",
+    "link": "https://expo.dev/@istasha/foodecity?serviceType=classic&distribution=expo-go",
+    "a": "Scan Project's QR code"
   }
-]
+]}

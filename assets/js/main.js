@@ -15,59 +15,48 @@ window.addEventListener("scroll", scrollHeader);
 /*=============== Projects ==================*/
 
 const projects = document.getElementById("projects");
-const data = [
+let data = [
   {
     id: "1",
     image: "../assets/img/krypt-web3.0.png",
-    name: "Krypt - Web3.0 Smart Contract",
+    name: "Krypt - Web3.0 Smart Contract Blockchain",
     class: "web3",
-    link: "https://web3-krypt-blockchain.netlify.app/",
-    source: "https://google.com",
-    a: "View Project",
+    link: "https://google.com",
   },
   {
     id: "2",
     image: "../assets/img/todolist-cover.png",
     name: "Animated To Do List Website",
     class: "web",
-    link: "./projects/todolist/todo_index.html",
-    source: "https://google.com",
-    a: "View Project",
+    link: "https://google.com",
   },
   {
     id: "3",
     image: "../assets/img/shopping-website.png",
     name: "Shopping Website",
     class: "web",
-    link: "../projects/Shopping Cart/index.html",
-    source: "https://google.com",
-    a: "View Project",
+    link: "https://google.com",
   },
   {
     id: "4",
     image: "../assets/img/speedtyping.png",
     name: "Speed Typing Game",
     class: "web",
-    link: "../projects/speedtyping/index.html",
-    source: "https://google.com",
-    a: "View Project",
+    link: "https://google.com",
   },
   {
     id: "5",
     image: "../assets/img/food-masters.png",
     name: "Food Recipes App - Android",
     class: "mobile",
-    link: "../projects/Food Masters/food-masters-index.html",
-    source: "https://google.com",
-    a: "View Project",
+    link: "https://google.com",
   },
   {
     id: "6",
     image: "../assets/img/react-todo.png",
     name: "To Do React Native App",
     class: "mobile",
-    source: "https://github.com/farrawy/React-Native-To-Do-List.git",
-    a: "View Project Source",
+    link: "https://google.com",
   },
   {
     id: "7",
@@ -85,7 +74,17 @@ const data = [
     source: "https://github.com/farrawy/RN-NFT-Marketplace",
     a: "View Project Source",
   },
+  {
+    id: "9",
+    image: "../assets/img/foodecity.png",
+    name: "React Native Foodecity",
+    class: "mobile",
+    source: "https://github.com/farrawy/RN-NFT-Marketplace",
+    link: "https://expo.dev/@istasha/foodecity?serviceType=classic&distribution=expo-go",
+    a: "Scan Project's QR code",
+  },
 ];
+
 data.forEach(projectFunction);
 function projectFunction(item, index) {
   var project = `<div class="work__card mix ${item.class}">`;
