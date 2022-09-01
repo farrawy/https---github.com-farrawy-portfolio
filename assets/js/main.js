@@ -15,6 +15,7 @@ window.addEventListener("scroll", scrollHeader);
 /*=============== Projects ==================*/
 
 const projects = document.getElementById("projects");
+
 let data = [
   {
     id: "1",
@@ -74,15 +75,15 @@ let data = [
     source: "https://github.com/farrawy/RN-NFT-Marketplace",
     a: "View Project Source",
   },
-  {
-    id: "9",
-    image: "../assets/img/foodecity.png",
-    name: "React Native Foodecity",
-    class: "mobile",
-    source: "https://github.com/farrawy/RN-NFT-Marketplace",
-    link: "https://expo.dev/@istasha/foodecity?serviceType=classic&distribution=expo-go",
-    a: "Scan Project's QR code",
-  },
+  // {
+  //   id: "9",
+  //   image: "../assets/img/foodecity.png",
+  //   name: "React Native Foodecity",
+  //   class: "mobile",
+  //   source: "https://github.com/farrawy/RN-NFT-Marketplace",
+  //   link: "https://expo.dev/@istasha/foodecity?serviceType=classic&distribution=expo-go",
+  //   a: "Scan Project's QR code",
+  // },
 ];
 
 data.forEach(projectFunction);
